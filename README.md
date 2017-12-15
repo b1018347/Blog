@@ -4,6 +4,9 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.4.
 
+# Example
+
+1. [This project running on Google Firebase](https://ng-blog-9afda.firebaseapp.com)
 
 # Run
 
