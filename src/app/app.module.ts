@@ -23,6 +23,7 @@ import { AuthService } from './auth/auth.service';
 import { AuthGuard } from './auth/auth-guard.service';
 import { ReversePipe } from './shared/reverse.pipe';
 import { firebaseConfig } from './auth/firebase.credentials';
+import { AboutComponent } from './about/about.component';
 
 
 
@@ -30,8 +31,9 @@ import { firebaseConfig } from './auth/firebase.credentials';
 
 const appRoutes: Routes = [
   {path: 'new', component: NewComponent, canActivate: [AuthGuard]},
-  {path: 'edit/:id', component: EditComponent},
+  {path: 'edit/:id', component: EditComponent, canActivate: [AuthGuard]},
   {path: 'signin', component: SigninComponent},
+  {path: 'about', component: AboutComponent},
   {path: '', component: IndexComponent, pathMatch: 'full'},
   {path: ':id', component: ShowComponent},
   
@@ -50,7 +52,8 @@ firebase.initializeApp(firebaseConfig);
     NewComponent,
     EditComponent,
     SigninComponent,
-    ReversePipe
+    ReversePipe,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

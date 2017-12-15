@@ -2,6 +2,7 @@
   <div class="ui container">
       <div class="header item"><i class="world icon"></i>An Idiot Abroad</div>
       <a routerLink="/" class="item">Home</a>
+      <a routerLink="/about" class="item">About</a>
       <a routerLink="/new" class="item" *ngIf="authService.isAuthenticated()">New Post</a>
       <a routerLink="/signin" class="item" *ngIf="!authService.isAuthenticated()">Logon</a>
       <a (click)="onLogout()" class="item" *ngIf="authService.isAuthenticated()">Logout</a>
