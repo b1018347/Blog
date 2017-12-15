@@ -1,0 +1,27 @@
+<div class="ui main text container" [@slideIn]>
+  <div class="ui huge header">My Ramblings</div>
+  <div class="ui top attached segment">
+      <div class="ui divided items">
+              <div class="item" *ngFor="let blog of blogsObservable | async">
+                  <div class="image">
+                      <img src="{{blog.image}}" />
+                  </div>
+                  <div class="content">
+                      <a class="header" routerLink="/{{blog.id}}">{{blog.title}}</a>
+                      <div class="meta">
+                          <span>{{blog.created | slice:0:10}}</span>
+                      </div>
+                      <div class="description">
+                          <p>{{blog.body | slice:0:100}}...</p>
+                      </div>
+                      <div class="extra">
+                         <a class="ui floated basic blue button" routerLink="/{{blog.id}}">
+                             Read More
+                             <i class="right chevron icon"></i>
+                        </a>
+                      </div>
+                  </div>        
+              </div>
+      </div>
+  </div>
+</div>

@@ -1,27 +1,35 @@
-# Blog
+# Blog SPA using Angular and Firebase
+
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.4.
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+# Run
 
-## Code scaffolding
+1. Download => npm install.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+2. Create a project on Google Firebase.
 
-## Build
+3. create a file in app/auth called firebase.credentials.ts with the following:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+```
+export const  firebaseConfig = {
+    apiKey: "your-key",
+    authDomain: "your-authDomain",
+    databaseURL: "your-db",
+    projectId: "your-projectId",
+    storageBucket: "your-storage",
+    messagingSenderId: "your-senderId"
+  };
 
-## Running unit tests
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+3. Run `ng serve` in the angular cli and cross your fingers.
 
-## Running end-to-end tests
+4. Create a login in the authentication section of Firebase to create and edit posts.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+# Host 
 
-## Further help
+1. [See here](https://stackoverflow.com/questions/42573987/how-to-host-angular-2-website)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

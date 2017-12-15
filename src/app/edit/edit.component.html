@@ -1,0 +1,30 @@
+<div class="ui main text container segment" *ngFor="let blog of blogObservable | async" [@slideIn]>
+  <div class="ui huge header">Edit Blog</div>
+  <form class="ui form" (ngSubmit)="onSubmit(f)" #f="ngForm">
+      <div class="field">
+          <label>Title</label>
+          <input type="text" [(ngModel)]="blog.title"  placeholder="title" name="title" ngModel required>
+      </div>
+      <div class="field">
+          <label>Image</label>
+          <input type="text" [(ngModel)]="blog.image" placeholder="image" name="image" ngModel required>
+      </div>        
+      <div class="field">
+          <label>Blog Content</label>
+          <textarea placeholder="blog post goes here" [(ngModel)]="blog.body" name="body" ngModel required></textarea>
+      </div>    
+      <div class="field">
+        <label>Date</label>
+        <input type="text" [(ngModel)]="blog.created" name="created" ngModel required>
+    </div> 
+      <div class="field">
+            <div class="ui slider checkbox">
+                    <input type="checkbox" [(ngModel)]="blog.deleted" name="deleted" ngModel>
+                    <label>Deleted</label>
+            </div>
+        </div> 
+           
+      <input type="submit" [disabled]="!f.valid" class="ui purple big basic button">
+      
+  </form>
+</div>

@@ -1,0 +1,7 @@
+.ui.segment:first-child{
+    margin-top:80px;
+}
+
+.top-buffer{
+    margin-top: 5px;
+}

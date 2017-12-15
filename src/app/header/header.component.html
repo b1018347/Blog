@@ -1,0 +1,8 @@
+<div class="ui fixed inverted menu">
+  <div class="ui container">
+      <div class="header item"><i class="world icon"></i>An Idiot Abroad</div>
+      <a routerLink="/" class="item">Home</a>
+      <a routerLink="/new" class="item" *ngIf="authService.isAuthenticated()">New Post</a>
+      <a routerLink="/signin" class="item" *ngIf="!authService.isAuthenticated()">Logon</a>
+      <a (click)="onLogout()" class="item" *ngIf="authService.isAuthenticated()">Logout</a>
+  </div>

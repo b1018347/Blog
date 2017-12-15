@@ -1,0 +1,19 @@
+<div class="ui main text container segment" [@slideIn]>
+  <div class="ui huge header">New Blog</div>
+  <form class="ui form" (ngSubmit)="onSubmit(f)" #f="ngForm">
+      <div class="field">
+          <label>Title</label>
+          <input type="text" name="title" placeholder="title" ngModel required>
+      </div>
+      <div class="field">
+          <label>Image</label>
+          <input type="text" name="image" placeholder="image" ngModel required>
+      </div>        
+      <div class="field">
+          <label>Blog Content</label>
+          <textarea name="body" placeholder="blog post goes here" ngModel required></textarea>
+      </div>     
+      <input type="submit" [disabled]="!f.valid" class="ui purple big basic button">
+      
+  </form>
+</div>

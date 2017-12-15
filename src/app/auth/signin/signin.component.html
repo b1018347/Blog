@@ -1,0 +1,14 @@
+<div class="ui main text container segment" [@slideIn]>
+    <div class="ui huge header">Logon</div>
+  <form class="ui form" (ngSubmit)="onSignin(f)" #f="ngForm">
+    <div class="field">
+      <label>Email</label>
+      <input type="text" name="email" placeholder="Email" ngModel required>
+    </div>
+    <div class="field">
+      <label>Password</label>
+      <input type="password" name="password" placeholder="Password" ngModel required>
+    </div>
+    <button class="ui floated basic button" [disabled]="!f.valid" type="submit">Submit</button>
+  </form>
+</div>

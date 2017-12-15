@@ -1,0 +1,18 @@
+<div class="ui main text container segment" *ngFor="let blog of blogObservable | async" [@slideIn]>
+  <div class="ui huge header">{{blog.title}}</div>
+  <div class="ui top attached">
+      <div class="item">
+          <img class="ui centered rounded image" src="{{blog.image}}" />
+      </div>
+      <div class="content top-buffer">
+          <h4>{{blog.created | slice:0:10}}</h4>
+      </div>
+      <div class="description top-buffer">
+          <p>{{blog.body}}</p>
+      </div>
+      <button  routerLink="/" class="ui orange basic button top-buffer">Back</button>
+      <button *ngIf="authService.isAuthenticated()" routerLink="/edit/{{blog.id}}" class="ui orange basic button">Update</button>
+
+      
+  </div>
+</div>
