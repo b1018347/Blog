@@ -1,0 +1,21 @@
+{
+    "short_name": "Cam's Blog",
+    "name": "Cam's Blog",
+    "start_url": "/",
+    "theme_color": "#f48c5b",
+    "background_color": "#ffffff",
+    "display": "standalone",
+    "orientation": "portrait",
+    "icons": [
+        {
+            "src": "/assets/icons/world.png",
+            "sizes": "32x32",
+            "type": "image/png"
+        },
+        {
+            "src": "/assets/icons/world-144.png",
+            "sizes": "144x144",
+            "type": "image/png"
+        }
+    ]
+}

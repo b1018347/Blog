@@ -25,6 +25,8 @@ import { ReversePipe } from './shared/reverse.pipe';
 import { firebaseConfig } from './auth/firebase.credentials';
 import { AboutComponent } from './about/about.component';
 
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 
 
@@ -57,6 +59,7 @@ firebase.initializeApp(firebaseConfig);
   ],
   imports: [
     BrowserModule,
+    environment.production ? ServiceWorkerModule.register('/ngsw-worker.js') : [],
     BrowserAnimationsModule,
     RouterModule.forRoot(appRoutes),
     FormsModule,
