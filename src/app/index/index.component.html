@@ -23,5 +23,11 @@
                   </div>        
               </div>
       </div>
+      <div class="ui negative message" *ngIf='errorMessage != ""'>
+        <div class="header">
+          An error has occured!
+        </div>
+        {{errorMessage}}
+      </div>
   </div>
 </div>

@@ -11,4 +11,11 @@
     </div>
     <button class="ui floated basic button" [disabled]="!f.valid" type="submit">Submit</button>
   </form>
+  <div class="ui negative message" *ngIf='errorMessage != ""'>
+    <i class="close icon" (click)='onErrorDismiss()'></i>
+    <div class="header">
+      An error has occured!
+    </div>
+    {{errorMessage}}
+  </div>
 </div>

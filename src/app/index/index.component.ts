@@ -13,10 +13,16 @@ import { slideIn } from '../shared/animations/slide-in.animation';
 })
 export class IndexComponent implements OnInit {
   blogsObservable: Observable<any[]>;
+  errorMessage: string = '';
   constructor(private blogService: BlogService) { }
   
   ngOnInit() {
-    this.blogsObservable = this.blogService.getBlogs();
+      if(navigator.onLine) {
+        this.blogsObservable = this.blogService.getBlogs();
+      } else {
+        this.errorMessage = 'Please check network connection';
+      }
+   
   }
 
 
